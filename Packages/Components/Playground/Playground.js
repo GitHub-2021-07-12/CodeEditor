@@ -117,9 +117,14 @@ export class Playground {
             },
             method: 'post',
         };
+
+        console.log('Mock_request:', fetch_opts.body);
+
         let response_json = await Mock.fetch(this.constructor.url_execute, fetch_opts);
         let response_data = JSON.parse(response_json);
 
         this._outputItem_data__set(outputItem, response_data);
+
+        console.log('Mock_response:', response_data);
     }
 }

@@ -1,7 +1,5 @@
 export class Mock {
     static async fetch(url, opts) {
-        console.log('Mock.fetch:', url, opts);
-
         let delay = Math.random() * 2e3;
         await new Promise((resolve) => setTimeout(resolve, delay));
 

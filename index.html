@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+
+<html>
+    <head>
+        <title>CodeEditor</title>
+
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/ace/1.36.5/ace.js'></script>
+
+        <link href='./Main/Main.css' rel='stylesheet'>
+        <script src='./Main/Main.js' type='module'></script>
+    </head>
+
+    <body>
+        <div id='playground'>
+            <div id='playground__controlPanel'>
+                <div>
+                    <span class='playground__label'>Language:</span>
+                    <select id='playground__select_syntax' class='playground__select'>
+                        <option value='golang'>Go</option>
+                        <option value='javascript'>JavaScript</option>
+                        <option value='python'>Python</option>
+                    </select>
+                </div>
+
+                <div>
+                    <span class='playground__label'>Theme:</span>
+                    <select id='playground__select_theme' class='playground__select'>
+                        <option value='ambiance'>Ambiance</option>
+                        <option value='chrome'>Chrome</option>
+                        <option value='monokai'>Monokai</option>
+                    </select>
+                </div>
+
+                <button id='playground__button_run' class='playground__button'>► Run</button>
+            </div>
+
+            <div id='playground__editor'></div>
+
+            <div id='playground__task'>
+                <h2>Задания</h2>
+
+                <p>
+                    1. Написать программу, которая выводит все числа Фибоначчи, меньшие заданного числа. Задача поможет научиться работать с условиями и циклами для генерации чисел до определённого предела.
+                </p>
+                <p>
+                    2. Нужно вывести первые n строк треугольника Паскаля. В этом треугольнике на вершине и по бокам стоят единицы, а каждое число внутри равно сумме двух расположенных над ним чисел.
+                </p>
+                <p>
+                    3. Вы принимаете от пользователя последовательность чисел, разделённых запятой. Составьте список и кортеж с этими числами.
+                </p>
+            </div>
+
+            <div id='playground__outputPanel'>
+                <div id='playground__outputContainer'></div>
+                <button id='playground__button_clear' class='playground__button'>X</button>
+            </div>
+
+            <template id='playground__template'>
+                <pre class='playground__outputItem' status=''></pre>
+            </template>
+        </div>
+    </body>
+</html>

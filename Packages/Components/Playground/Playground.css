@@ -1,0 +1,98 @@
+.playground__button {
+    border: solid 1px;
+    border-radius: 4px;
+    font: inherit;
+    padding: 8px 16px;
+}
+
+.playground__outputItem {
+    font-family: 'Consolas';
+
+
+    &:first-of-type {
+        margin-top: 0;
+    }
+    &[status='']::after {
+        content: 'Running ...';
+    }
+    &[status='error'] {
+        color: #f00;
+    }
+    &[status='success'] {
+        color: #090;
+    }
+}
+
+.playground__select {
+    font: inherit;
+    padding: 4px 16px;
+}
+
+
+#playground {
+    background: #eee;
+    box-sizing: border-box;
+    display: grid;
+    font: 20px / 1.5 'Arial';
+    gap: 10px;
+    grid-template: auto 2fr 1fr / 1fr 5fr;
+    height: 100dvh;
+    padding: 10px;
+}
+
+#playground__button_clear {
+    align-self: start;
+    background: hsl(0 70% 80%);
+    color: hsl(0 100% 20%);
+
+
+    &:hover {
+        background: hsl(0 100% 80%);
+    }
+}
+
+#playground__button_run {
+    background: hsl(120 70% 80%);
+    color: hsl(120 100% 20%);
+
+
+    &:hover {
+        background: hsl(120 100% 80%);
+    }
+}
+
+#playground__controlPanel {
+    display: grid;
+    gap: 10px;
+    grid-column: 2 / -1;
+    grid-template-columns: max-content max-content auto;
+    justify-content: center;
+    place-items: center start;
+}
+
+#playground__editor {
+    border: #000 solid 1px;
+    font: inherit;
+    font-family: 'Consolas';
+}
+
+#playground__outputContainer {
+    overflow: auto;
+}
+
+#playground__outputPanel {
+    background: #fff;
+    border: #000 solid 1px;
+    display: grid;
+    gap: 10px;
+    grid-template: subgrid / auto max-content;
+    padding: 10px;
+}
+
+#playground__task {
+    background: #fff;
+    border: #000 solid 1px;
+    grid-row: 2 / -1;
+    overflow: auto;
+    padding: 10px;
+}
